@@ -1,0 +1,30 @@
+<form [formGroup]="getData" #formDir="ngForm" >
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Input</mat-label>
+  <input matInput formControlName="one" >
+</mat-form-field><br>
+
+<mat-form-field appearance="fill">
+  <mat-label>Input</mat-label>
+  <input matInput formControlName="two">
+</mat-form-field><br>
+
+<mat-form-field appearance="fill">
+  <mat-label>Input</mat-label>
+  <input matInput formControlName="three">
+</mat-form-field><br>
+
+  <button type='reset' mat-raised-button color="primary" (click)="formDir.resetForm" > reset </button>
+</form>
+
+<!-- 
+<p> {{getData.value.one  | json}},{{getData.value.two  | json}},{{getData.value.three  | json}} </p> -->
+
+<p>
+
+  {{
+    getValues()
+  }}
+</p>
